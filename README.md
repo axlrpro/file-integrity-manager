@@ -4,7 +4,7 @@ A File Integrity Monitor (FIM) is used by cybersecurity professionals to detect 
 ## Process
 This program works as follows:
 
-'''mermaid
+```mermaid
 flowchart TD
     A[Start] -->|input: path| B[Check if path exists in record];
     B--> |path exists| C[Ask user what to do:\nA - Create image\nB - Compare image];
@@ -14,9 +14,9 @@ flowchart TD
     C--> |B| F[Load file:hash from image.txt\nFor each file -\n1. Calculate hash\n2.Compare against existing hash];
     F-->F;
     F--> G[Hash doesn't match: File changed\nHash doesn't exist: New file\nFile doesn't exist: File deleted];
-'''
+```
 
-# Usage
+## Usage
     python fm.py <path>
 Path should be of a folder which contains only files and not any other folder inside of it
 
